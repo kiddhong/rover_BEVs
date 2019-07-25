@@ -1,0 +1,21 @@
+obstacle_range: 5 # Maximum range sensor
+raytrace_range: 5 # Range to which we will raytrace freespace given a sensor reading
+
+footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
+#robot_radius: 0.105
+
+inflation_radius: 0.05
+cost_scaling_factor: 10.0
+
+#laser_scan_sensor: {sensor_frame: frame_name, data_type: LaserSacn, topic: topic_name}
+
+map_type: costmap
+
+observation_sources: base_scan
+base_scan: {data_type: LaserScan, topic: /zed/scan,
+ marking: true, clearing: true, max_obstacle_height: 0.5}
+
+
+# observation_sources: point_cloud_sensor
+# point_cloud_sensor: {data_type: PointCloud2, topic: /zed_gazebo_l/depth/points,
+#  marking: true, clearing: true, max_obstacle_height: 0.5}
