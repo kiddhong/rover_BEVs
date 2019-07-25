@@ -1,0 +1,7 @@
+image: /home/jehonglee/catkin_ws/src/turtlebot3/turtlebot3_navigation/maps/map_rev.pgm
+resolution: 0.050000
+origin: [-10.0, -10.0, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
