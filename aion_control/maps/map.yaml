@@ -1,4 +1,4 @@
-image: /home/jehonglee/catkin_ws/src/turtlebot3/turtlebot3_navigation/maps/map_rev.pgm
+image: map.pgm
 resolution: 0.050000
 origin: [-10.0, -10.0, 0.0]
 negate: 0
