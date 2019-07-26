@@ -13,8 +13,8 @@
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
 
-    <arg name="x_pos" default="-2.0"/>
-    <arg name="y_pos" default="0.5"/>
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
     <node
         name="map_server"
@@ -51,6 +51,13 @@
         type="static_transform_publisher"
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
+
+    <node name="odom_to_local_origin"
+        pkg="tf"
+        type="static_transform_publisher"
+        args="0 0 0 0 0 0 odom local_origin 100">
+    </node>
+
 
     <node
     name="joint_state_publisher"
