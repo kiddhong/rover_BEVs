@@ -56,7 +56,7 @@
     name="joint_state_publisher"
     pkg="joint_state_publisher"
     type="joint_state_publisher" />
-    
+
     <node
     name="robot_state_publisher"
     pkg="robot_state_publisher"
@@ -78,6 +78,7 @@
         <!-- Topic Remaps for use on ROS -->
         <remap from="/mavros/vision_pose/pose" to="/robot_pose" />
         <remap from="/mavros/setpoint_velocity/cmd_vel_unstamped" to="/cmd_vel" />
+        <remap from="/mavros/setpoint_position/local" to="/move_base/goal" />
     </node>
 
 
