@@ -51,6 +51,16 @@
         type="static_transform_publisher"
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
+
+    <node
+    name="joint_state_publisher"
+    pkg="joint_state_publisher"
+    type="joint_state_publisher" />
+    
+    <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
     
     <node if="$(arg use_mavros)" pkg="mavros" type="mavros_node" name="mavros" required="$(eval not respawn_mavros)" clear_params="true" output="$(arg mavros_output)" respawn="$(arg respawn_mavros)">
         <param name="fcu_url" value="$(arg fcu_url)" />
