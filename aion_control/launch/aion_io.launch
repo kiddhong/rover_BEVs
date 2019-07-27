@@ -52,12 +52,13 @@
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
 
+    <!-- Only For Indoor -->
     <node name="odom_to_local_origin"
         pkg="tf"
         type="static_transform_publisher"
         args="0 0 0 0 0 0 odom local_origin 100">
     </node>
-
+    <!-- Only For Indoor -->
 
     <node
     name="joint_state_publisher"
