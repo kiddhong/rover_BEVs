@@ -4,7 +4,7 @@ raytrace_range: 5 # Range to which we will raytrace freespace given a sensor rea
 footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
 #robot_radius: 0.105
 
-inflation_radius: 0.05
+inflation_radius: 0.55
 cost_scaling_factor: 10.0
 
 #laser_scan_sensor: {sensor_frame: frame_name, data_type: LaserSacn, topic: topic_name}

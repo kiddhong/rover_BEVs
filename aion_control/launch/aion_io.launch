@@ -1,3 +1,6 @@
+<?xml version="1.0"?>
+
+
 <launch>
     <arg name="use_rosbot" default="true" />
     <arg name="fcu_url" default="udp://:14551@" />
@@ -13,6 +16,7 @@
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
 
+    <!--
     <arg name="x_pos" default="0.0"/>
     <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
@@ -21,6 +25,7 @@
         pkg="map_server"
         type="map_server"
         args="$(find aion_control)/maps/map.yaml"/>
+    -->
 
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
