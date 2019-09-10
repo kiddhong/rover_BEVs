@@ -16,7 +16,7 @@
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
 
-    <!--
+    
     <arg name="x_pos" default="0.0"/>
     <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
@@ -25,7 +25,7 @@
         pkg="map_server"
         type="map_server"
         args="$(find aion_control)/maps/map.yaml"/>
-    -->
+    
 
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
@@ -58,11 +58,11 @@
     </node>
 
     <!-- Only For Indoor -->
-    <!-- <node name="odom_to_local_origin"
+    <node name="odom_to_local_origin"
         pkg="tf"
         type="static_transform_publisher"
         args="0 0 0 0 0 0 odom local_origin 100">
-    </node> -->
+    </node>
     <!-- Only For Indoor -->
 
     <node
