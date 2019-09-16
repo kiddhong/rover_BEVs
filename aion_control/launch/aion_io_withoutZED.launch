@@ -13,6 +13,11 @@
     <arg name="respawn_mavros" default="false" />
     <arg name="pluginlists_yaml" default="$(find mavros)/launch/apm_pluginlists.yaml" />
     <arg name="config_yaml" default="$(find mavros)/launch/apm_config.yaml" />
+
+<!--
+    <arg name="pluginlists_yaml" default="$(find aion_control)/config/apm_pluginlists.yaml" />
+    <arg name="config_yaml" default="$(find aion_control)/config/apm_config.yaml" />
+-->
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
 
