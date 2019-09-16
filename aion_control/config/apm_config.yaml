@@ -45,14 +45,14 @@ cmd:
 
 # global_position
 global_position:
-  frame_id: "obstacle_mapper/map"             # origin frame
+  frame_id: "map"             # origin frame
   child_frame_id: "base_link" # body-fixed frame
   rot_covariance: 99999.0   # covariance for attitude?
   gps_uere: 1.0             # User Equivalent Range Error (UERE) of GPS sensor (m)
   use_relative_alt: true    # use relative altitude for local coordinates
   tf:
-    send: false               # send TF?
-    frame_id: "obstacle_mapper/map"  # TF frame_id
+    send: true               # send TF?
+    frame_id: "map"  # TF frame_id
     global_frame_id: "earth"  # TF earth frame_id
     child_frame_id: "base_link" # TF child_frame_id
 
@@ -67,9 +67,9 @@ imu:
 
 # local_position
 local_position:
-  frame_id: "obstacle_mapper/map"
+  frame_id: "map"
   tf:
-    send: false
+    send: true
     frame_id: "map"
     child_frame_id: "base_link"
     send_fcu: false
@@ -95,7 +95,7 @@ setpoint_attitude:
   use_quaternion: false     # enable PoseStamped topic subscriber
   tf:
     listen: false           # enable tf listener (disable topic subscribers)
-    frame_id: "obstacle_mapper/map"
+    frame_id: "map"
     child_frame_id: "target_attitude"
     rate_limit: 50.0
 
@@ -103,7 +103,7 @@ setpoint_attitude:
 setpoint_position:
   tf:
     listen: false           # enable tf listener (disable topic subscribers)
-    frame_id: "obstacle_mapper/map"
+    frame_id: "map"
     child_frame_id: "target_position"
     rate_limit: 50.0
   mav_frame: LOCAL_NED
@@ -166,7 +166,7 @@ fake_gps:
   tf:
     listen: false
     send: false           # send TF?
-    frame_id: "obstacle_mapper/map"       # TF frame_id
+    frame_id: "map"       # TF frame_id
     child_frame_id: "fix" # TF child_frame_id
     rate_limit: 10.0      # TF rate
   gps_rate: 5.0           # GPS data publishing rate
@@ -194,7 +194,7 @@ px4flow:
 vision_pose:
   tf:
     listen: false           # enable tf listener (disable topic subscribers)
-    frame_id: "obstacle_mapper/map"
+    frame_id: "map"
     child_frame_id: "vision_estimate"
     rate_limit: 10.0
 

@@ -11,13 +11,12 @@
     <arg name="mavros_output" default="log" />
     <arg name="fcu_protocol" default="v2.0" />
     <arg name="respawn_mavros" default="false" />
-    <arg name="pluginlists_yaml" default="$(find mavros)/launch/apm_pluginlists.yaml" />
-    <arg name="config_yaml" default="$(find mavros)/launch/apm_config.yaml" />
-
-<!--
+    <!-- <arg name="pluginlists_yaml" default="$(find mavros)/launch/apm_pluginlists.yaml" />
+    <arg name="config_yaml" default="$(find mavros)/launch/apm_config.yaml" /> -->
+    
     <arg name="pluginlists_yaml" default="$(find aion_control)/config/apm_pluginlists.yaml" />
     <arg name="config_yaml" default="$(find aion_control)/config/apm_config.yaml" />
--->
+
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
 
@@ -62,13 +61,12 @@
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
 
-    <!-- Only For Indoor -->
-    <!-- <node name="odom_to_local_origin"
+    <!--
+    <node name="odom_to_local_origin"
         pkg="tf"
         type="static_transform_publisher"
         args="0 0 0 0 0 0 odom local_origin 100">
     </node> -->
-    <!-- Only For Indoor -->
 
     <node
     name="joint_state_publisher"
