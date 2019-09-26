@@ -12,6 +12,6 @@ plugin_blacklist:
 - vibration
 # vision_speed_estimate
 
-plugin_whitelist:
+plugin_whitelist: []
 #- 'sys_*'
-- vision_pose_estimate
+#- vision_pose_estimate
