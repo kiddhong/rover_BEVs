@@ -64,6 +64,12 @@
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
 
+    <node name="odom_matcher"
+	pkg="tf"
+	type="static_transform_publisher"
+	args="0 0 0 0 0 0 map UGV/odom 100">
+    </node>
+
     <node
     name="joint_state_publisher"
     pkg="joint_state_publisher"
