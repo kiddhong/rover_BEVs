@@ -10,16 +10,18 @@
  <node pkg="rosbag" type="record" name="rosbag_record_main"
        args="record -o rosbag_main /mavros/local_position/pose /mavros/local_position/velocity /mavros/local_position/odom /mavros/globa_position/local /camera_pose/UAV/poistion_ned /camera_pose/UAV/velocity_ned /joint_states /robot_pose
        /obstacle_mapper/map /tf /tf_static"
-       />
+       output="screen" />
 
  <node pkg="rosbag" type="record" name="rosbag_record_darknet"
        args="record -o rosbag_yolo /darknet_ros/detection_image /darknet_ros/bounding_boxes /uav_camera/image_rect_color"
-       />
+       output="screen" />
 
   <node pkg="rosbag" type="record" name="rosbag_record_navigation"
        args="record -o rosbag_nav /zed/scan /cmd_vel"
-       if="$(arg record_nav)"/>
+       if="$(arg record_nav)"
+       output="screen" />
 
  <node pkg="rosbag" type="record" name="rosbag_record_diag"
-       args="record -o rosbag_diag /diagnostics /rosout"/>   
+       args="record -o rosbag_diag /diagnostics /rosout"
+       output="screen" />   
 </launch>
