@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- <arg name="record_cameras" default="true" /> -->
+  <arg name="record_nav" default="false" />
+
+ <param name="robot_description" 
+  command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+
+ <node pkg="rosbag" type="record" name="rosbag_record_main"
+       args="record -o /mavros/local_position/pose /mavros/local_position/velocity /mavros/local_position/odom /mavros/globa_position/local /camera_pose/UAV/poistion_ned /camera_pose/UAV/velocity_ned /joint_states /robot_pose
+       /obstacle_mapper/map /tf /tf_static"
+       />
+
+ <node pkg="rosbag" type="record" name="rosbag_record_darknet"
+       args="record -o /darknet_ros/detection_image /darknet_ros/bounding_boxes /uav_camera/image_rect_color"
+       />
+
+  <node pkg="rosbag" type="record" name="rosbag_record_navigation"
+       args="record -o /zed/scan /cmd_vel"
+       if="$(arg record_nav)"/>
+
+ <node pkg="rosbag" type="record" name="rosbag_record_diag"
+       args="record -o /diagnostics /rosout"/>   
+</launch>

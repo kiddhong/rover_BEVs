@@ -33,7 +33,7 @@
       <!-- Move Base -->
     <include file="$(find aion_control)/launch/move_base.launch">
         <arg name="cmd_vel_topic" value="cmd_vel" />
-        <arg name="odom_topic" value="odom" />
+        <arg name="odom_topic" value="UGV/odom" />
     </include>
 
 </launch>
