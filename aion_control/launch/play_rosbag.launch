@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+ <arg name="path" default="/home/jehonglee/log/" />
+ <arg name="file" default="rosbag_main" />
+ 
+ <param name="robot_description" 
+  command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+
+ <node pkg="rosbag" type="play" name="rosbag_play"
+       args="--clock $(arg path)$(arg file).bag"
+       output="screen" />
+
+</launch>
