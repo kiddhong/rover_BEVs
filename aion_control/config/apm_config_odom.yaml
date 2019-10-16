@@ -69,7 +69,7 @@ imu:
 local_position:
   frame_id: "UGV/odom"
   tf:
-    send: false
+    send: true
     frame_id: "UGV/odom"
     child_frame_id: "base_link"
     send_fcu: false
