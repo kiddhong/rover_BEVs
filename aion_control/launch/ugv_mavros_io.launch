@@ -68,11 +68,11 @@
     </node>
 
     <!-- If not use KF, make comment. -->
-   <!-- <node name="kf_localizer"
+   <node name="kf_localizer"
     pkg="tf"
     type="static_transform_publisher"
     args="0 0 0 0 0 0 UGV/est_base_link base_link 100">
-    </node>-->
+    </node>
     <!-- If not use KF, make comment. -->
 
     <node name="odom_matcher"
