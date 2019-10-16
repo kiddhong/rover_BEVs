@@ -9,7 +9,7 @@
   command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
 
   <node pkg="rosbag" type="record" name="rosbag_record_main"
-       args="record -o /home/jehonglee/log/rosbag_main.bag /mavros/local_position/pose /mavros/local_position/velocity /mavros/local_position/odom /mavros/globa_position/local /camera_pose/UAV/poistion_ned /camera_pose/UAV/velocity_ned /joint_states /robot_pose /obstacle_mapper/map /tf /tf_static /darknet_ros/detection_image /darknet_ros/bounding_boxes /uav_camera/image_rect_color /rosbag_diag /diagnostics /rosout"
+       args="record -o /home/jehonglee/log/rosbag_main.bag /mavros/local_position/pose /mavros/local_position/velocity /mavros/local_position/odom /mavros/globa_position/local /camera_pose/UAV/poistion_ned /camera_pose/UAV/velocity_ned /joint_states /robot_pose /obstacle_mapper/map /tf /tf_static /darknet_ros/detection_image /darknet_ros/bounding_boxes /uav_camera/image_rect_color /obstacle_mapper/obstacle_map /obstacle_mapper/accumul_map /rosbag_diag /diagnostics /rosout"
        output="screen" />
 
   <node pkg="rosbag" type="record" name="rosbag_record_zed"
