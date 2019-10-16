@@ -17,11 +17,12 @@
     <arg name="use_mavros" default="true" />
     
     <!-- ZED -->
-    <arg name="svo_file"             default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
-    <arg name="stream"               default="" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
+
+    <arg name="svo_file"             default="" />
+    <arg name="stream"               default="" />
 
     <arg name="node_name"            default="zed_node" />
-    <arg name="camera_model"         default="zed" /> <!-- 'zed' or 'zedm' -->
+    <arg name="camera_model"         default="zed" />
     <arg name="publish_urdf"         default="false" />
     
     <group ns="zed">
@@ -34,6 +35,8 @@
         </include>
     </group>
 
+    <!-- ZED -->
+    
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
 
