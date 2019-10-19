@@ -94,7 +94,7 @@
   </xacro:macro>
 
   <!-- Defining model links. -->
-	<link name="UGV/odom" />
+	<link name="odom" />
   <link
     name="base_link">
     <inertial>
@@ -262,7 +262,7 @@
   <joint
     name="fixed_base_joint"
     type="fixed">
-    <parent link="UGV/odom" />
+    <parent link="odom" />
     <child link="base_link" />
   </joint>
   <joint
