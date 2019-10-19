@@ -13,7 +13,7 @@
        output="screen" />
 
   <node pkg="rosbag" type="record" name="rosbag_record_zed"
-       args="record -o /home/jehonglee/log/rosbag_nav.bag /zed/zed_node/point_cloud/cloud_registered /zed/scan"
+       args="record -o /home/jehonglee/log/rosbag_nav.bag /scan"
        if="$(arg record_zed)"
        output="screen" />
 

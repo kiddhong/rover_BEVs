@@ -15,27 +15,16 @@
     <arg name="config_yaml" default="$(find aion_control)/config/apm_config_tune.yaml" />
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
-    
-    <!-- ZED -->
-    <arg name="svo_file"             default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
-    <arg name="stream"               default="" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
-
-    <arg name="node_name"            default="zed_node" />
-    <arg name="camera_model"         default="zed" /> <!-- 'zed' or 'zedm' -->
-    <arg name="publish_urdf"         default="false" />
-    
-    <group ns="zed">
-        <include file="$(find zed_wrapper)/launch/zed_camera_r1.launch">
-            <arg name="svo_file"            value="$(arg svo_file)" />
-            <arg name="stream"              value="$(arg stream)" />
-            <arg name="node_name"           value="$(arg node_name)" />
-            <arg name="camera_model"        value="$(arg camera_model)" />
-            <arg name="publish_urdf"        value="$(arg publish_urdf)" />
-        </include>
-    </group>
 
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+
+    <node 
+        name="urg_node"
+        pkg="urg_node"
+        type="urg_node"
+        output="screen">
+    </node>
 
     <node
         name="tf_footprint_base"
@@ -51,6 +40,12 @@
         args="0 0 0.114485752303901 0 0 0 base_link top_link 40">
     </node>
 
+    <node name="tf_Lidar"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0.05 0 0 0 top_link laser 100">
+    </node>
+
     <node name="robot_pose_publisher"
         pkg="robot_pose_publisher"
         type="robot_pose_publisher"
@@ -63,7 +58,7 @@
         type="static_transform_publisher"
         args="0 0 0 0 0 0 base_link fcu 100">
     </node>
-
+    
     <!-- If use KF, make unomment. -->
     <!-- <node name="kf_localizer"
     pkg="tf"
