@@ -26,6 +26,9 @@
         type="map_server"
         args="$(find aion_control)/maps/map.yaml"/>
     
+    <node 
+        name="urg_node" pkg="urg_node" type="urg_node" output="screen">
+    </node>
 
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
