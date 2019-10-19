@@ -15,7 +15,8 @@
     <arg name="config_yaml" default="$(find aion_control)/config/apm_config_tune.yaml" />
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
-    
+
+
     <!-- ZED -->
     <arg name="svo_file"             default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
     <arg name="stream"               default="" /> <!-- <arg name="stream" default="<ip_address>:<port>"> -->
@@ -137,6 +138,13 @@
     
     <node if="$(arg use_bt_joystick)" pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node" />
      
-    
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
+    <arg name="z_pos" default="0.0"/>
+    <node
+        name="map_server"
+        pkg="map_server"
+        type="map_server"
+        args="$(find aion_control)/maps/map.yaml"/>
 
 </launch>

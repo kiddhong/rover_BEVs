@@ -1,4 +1,4 @@
-image: map.pgm
+image: site_a_free_space.png
 resolution: 0.050000
 origin: [-10.0, -10.0, 0.0]
 negate: 0
