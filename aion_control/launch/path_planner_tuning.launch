@@ -19,6 +19,15 @@
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
 
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
+    <arg name="z_pos" default="0.0"/>
+    <node
+        name="map_server"
+        pkg="map_server"
+        type="map_server"
+        args="$(find aion_control)/maps/map.yaml"/>
+
     <node 
         name="urg_node" pkg="urg_node" type="urg_node" output="screen">
     </node>
