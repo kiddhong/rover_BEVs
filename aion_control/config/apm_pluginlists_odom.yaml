@@ -13,5 +13,7 @@ plugin_blacklist:
 # vision_speed_estimate
 
 plugin_whitelist:
+- 'sys_*'
 - wheel_odometry
-#- 'sys_*'
+- command
+- param
