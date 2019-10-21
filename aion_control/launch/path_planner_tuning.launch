@@ -47,9 +47,9 @@
     </node>
 
     <node name="tf_Lidar"
-    pkg="tf"
-    type="static_transform_publisher"
-    args="0 0 0.05 0 0 0 top_link laser 100">
+        pkg="tf"
+        type="static_transform_publisher"
+        args="0 0 0.05 0 0 0 top_link laser 100">
     </node>
 
     <node name="robot_pose_publisher"
