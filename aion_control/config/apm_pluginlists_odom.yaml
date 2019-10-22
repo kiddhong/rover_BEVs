@@ -12,8 +12,8 @@ plugin_blacklist:
 - vibration
 # vision_speed_estimate
 
-plugin_whitelist:
-- wheel_odometry
-# 'sys_*'
-# command
-# param
+plugin_whitelist: []
+#- 'sys_*'
+#- wheel_odometry
+#- command
+#- param

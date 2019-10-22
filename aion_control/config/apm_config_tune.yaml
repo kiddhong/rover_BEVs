@@ -210,7 +210,7 @@ vibration:
 # wheel_odometry
 wheel_odometry:
   count: 2           # number of wheels to compute odometry
-  use_rpm: false     # use wheel's RPM instead of cumulative distance to compute odometry
+  use_rpm: true     # use wheel's RPM instead of cumulative distance to compute odometry
   wheel0: {x: -0.17, y:  0.16, radius: 0.078} # x-, y-offset (m,NED) and radius (m)
   wheel1: {x: -0.17, y: -0.16, radius: 0.078} # x-, y-offset (m,NED) and radius (m)
   send_raw: true              # send wheel's RPM and cumulative distance (~/wheel_odometry/rpm, ~/wheel_odometry/distance)
