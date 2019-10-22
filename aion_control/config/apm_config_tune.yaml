@@ -219,7 +219,7 @@ wheel_odometry:
   child_frame_id: "base_link" # body-fixed frame
   vel_error: 0.1              # wheel velocity measurement error 1-std (m/s)
   tf:
-    send: true
+    send: false
     frame_id: "UGV/odom"
     child_frame_id: "base_link"
 
