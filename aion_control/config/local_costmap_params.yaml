@@ -10,5 +10,5 @@ local_costmap:
   rolling_window: true # Costmap will remain centered around the robot.
   width: 6
   height: 6
-  resolution: 0.05
+  resolution: 0.02
   

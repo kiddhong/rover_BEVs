@@ -27,7 +27,7 @@ DWAPlannerROS:
   sim_time: 2
   vx_samples: 20
   vy_samples: 0
-  vtheta_samples: 40
+  vtheta_samples: 20
   controller_frequency: 5.0
 
 # Trajectory Scoring Parameters
