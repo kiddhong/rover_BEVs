@@ -17,7 +17,7 @@
     <arg name="use_mavros" default="true" />
     
     <!-- ZED -->
-
+<!--
     <arg name="svo_file"             default="" />
     <arg name="stream"               default="" />
 
@@ -34,8 +34,11 @@
             <arg name="publish_urdf"        value="$(arg publish_urdf)" />
         </include>
     </group>
-
+-->
     <!-- ZED -->
+    <node 
+        name="urg_node" pkg="urg_node" type="urg_node" output="screen">
+    </node>
     
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
     <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
@@ -53,6 +56,13 @@
         type="static_transform_publisher"
         args="0 0 0.114485752303901 0 0 0 base_link top_link 40">
     </node>
+
+    <node name="tf_Lidar"
+        pkg="tf"
+        type="static_transform_publisher"
+        args="0 0 0.05 0 0 0 top_link laser 100">
+    </node>
+
 
     <node name="robot_pose_publisher"
         pkg="robot_pose_publisher"
