@@ -2,7 +2,7 @@
 
 <launch>
   <!-- <arg name="record_cameras" default="true" /> -->
-  <arg name="record_nav" default="false" />
+  <arg name="record_nav" default="true" />
 
  <param name="robot_description" 
   command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
