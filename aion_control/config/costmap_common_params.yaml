@@ -1,8 +1,8 @@
 obstacle_range: 7 # Maximum range sensor
 raytrace_range: 7 # Range to which we will raytrace freespace given a sensor reading
 
-#footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
-footprint: [[-0.15,-0.1],[-0.15,0.1],[0.15,0.1],[0.15,-0.1]]
+footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
+#footprint: [[-0.15,-0.1],[-0.15,0.1],[0.15,0.1],[0.15,-0.1]]
 #robot_radius: 0.105
 
 inflation_radius: 0.5
