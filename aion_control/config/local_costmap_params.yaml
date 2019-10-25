@@ -11,4 +11,6 @@ local_costmap:
   width: 6
   height: 6
   resolution: 0.02
-  
+  inscribed_radius: 0.35
+  circumscribed_radius: 0.4
+  conservative_reset_dist: 1

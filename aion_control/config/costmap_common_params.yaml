@@ -1,10 +1,11 @@
 obstacle_range: 7 # Maximum range sensor
 raytrace_range: 7 # Range to which we will raytrace freespace given a sensor reading
 
-footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
+#footprint: [[-0.275, -0.21], [-0.275, 0.21], [0.275, 0.21], [0.275, -0.21]]
+footprint: [[-0.15,-0.1],[-0.15,0.1],[0.15,0.1],[0.15,-0.1]]
 #robot_radius: 0.105
 
-inflation_radius: 0.45
+inflation_radius: 0.5
 cost_scaling_factor: 20.0
 
 #laser_scan_sensor: {sensor_frame: frame_name, data_type: LaserSacn, topic: topic_name}
