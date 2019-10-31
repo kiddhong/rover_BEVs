@@ -95,7 +95,7 @@
 
   <!-- Defining model links. -->
 	<link name="UGV/odom" />
-  <link
+ <link
     name="base_link">
     <inertial>
       <origin
