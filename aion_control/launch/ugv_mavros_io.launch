@@ -60,7 +60,7 @@
     <node name="tf_Lidar"
         pkg="tf"
         type="static_transform_publisher"
-        args="0 0 0.05 0 0 0 top_link laser 100">
+        args="0 0 0.05 0 0 0 top_link laser 40">
     </node>
 
 
@@ -74,21 +74,21 @@
     <node name="base_to_fcu_broadcaster"
         pkg="tf"
         type="static_transform_publisher"
-        args="0 0 0 0 0 0 base_link fcu 100">
+        args="0 0 0 0 0 0 base_link fcu 40">
     </node>
 
     <!-- If not use KF, make comment. -->
     <node name="kf_localizer"
     pkg="tf"
     type="static_transform_publisher"
-    args="0 0 0 0 0 0 UGV/est_base_link base_link 100">
+    args="0 0 0 0 0 0 UGV/est_base_link base_link 40">
     </node>
     <!-- If not use KF, make comment. -->
 
     <node name="UAV_UGV_odom_matcher"
     pkg="tf"
     type="static_transform_publisher"
-    args="0 0 0 0.707 0.707 0 0 UAV/odom UGV/odom 100">
+    args="0 0 0 0.707 0.707 0 0 UAV/odom UGV/odom 40">
     </node>
 
     <!-- assumeption -->
