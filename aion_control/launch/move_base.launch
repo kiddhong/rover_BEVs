@@ -15,7 +15,7 @@
     <rosparam file="$(find aion_control)/config/dwa_local_planner_params.yaml" command="load" />
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
     <remap from="odom" to="$(arg odom_topic)"/>
-   <!-- <remap from="map" to="/obstacle_mapper/map"/>-->
+    <remap from="map" to="/obstacle_mapper/map"/>-->
  </node>
 
 </launch>
