@@ -17,7 +17,7 @@
     <arg name="use_mavros" default="true" />
 
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
-    <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_without_ZED.urdf.xacro' --inorder" />
 
     <arg name="x_pos" default="0.0"/>
     <arg name="y_pos" default="0.0"/>

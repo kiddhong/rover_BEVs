@@ -16,32 +16,12 @@
     <arg name="use_bt_joystick" default="false" />
     <arg name="use_mavros" default="true" />
     
-    <!-- ZED -->
-<!--
-    <arg name="svo_file"             default="" />
-    <arg name="stream"               default="" />
-
-    <arg name="node_name"            default="zed_node" />
-    <arg name="camera_model"         default="zed" />
-    <arg name="publish_urdf"         default="false" />
-    
-    <group ns="zed">
-        <include file="$(find zed_wrapper)/launch/zed_camera_r1.launch">
-            <arg name="svo_file"            value="$(arg svo_file)" />
-            <arg name="stream"              value="$(arg stream)" />
-            <arg name="node_name"           value="$(arg node_name)" />
-            <arg name="camera_model"        value="$(arg camera_model)" />
-            <arg name="publish_urdf"        value="$(arg publish_urdf)" />
-        </include>
-    </group>
--->
-    <!-- ZED -->
     <node 
         name="urg_node" pkg="urg_node" type="urg_node" output="screen">
     </node>
     
     <param if="$(arg use_rosbot)" name="use_sim_time" value="false"/>
-    <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_without_ZED.urdf.xacro' --inorder" />
 
     <node
         name="tf_footprint_base"
