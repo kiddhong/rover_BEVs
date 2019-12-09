@@ -3,7 +3,7 @@ global_costmap:
   robot_base_frame: base_footprint
   
   static_map: true  
-  update_frequency: 2.0 # Same as FPS of CNN obstacle map generator
+  update_frequency: 5.0 # Same as FPS of CNN obstacle map generator
   publish_frequency: 2.0
   transform_tolerance: 3.0
  
