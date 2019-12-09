@@ -3,7 +3,7 @@
 <launch>
   <arg name="cmd_vel_topic" default="cmd_vel" />
   <arg name="odom_topic" default="odom" />
-  
+  <arg name="map_topic" default="/obstacle_mapper/map/">
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
@@ -15,7 +15,7 @@
     <rosparam file="$(find aion_control)/config/dwa_local_planner_params.yaml" command="load" />
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
     <remap from="odom" to="$(arg odom_topic)"/>
-    <remap from="map" to="/obstacle_mapper/map"/>
+    <remap from="map" to="$(arg map_topic)"/>
  </node>
 
 </launch>
