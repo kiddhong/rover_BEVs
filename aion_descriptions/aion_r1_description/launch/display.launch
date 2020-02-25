@@ -6,7 +6,7 @@
     default="True" />
   <param
     name="robot_description"
-    command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_sim.urdf.xacro' --inorder" />
+    command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_without_ZED.urdf.xacro' --inorder" />
   <param
     name="use_gui"
     value="$(arg gui)" />
