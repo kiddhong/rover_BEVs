@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="model" />
+  <param
+    name="robot_description"
+    command="$(find xacro)/xacro '$(find aion_r1_description)/urdf/r1_without_ZED.urdf.xacro' --inorder" />
+
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find aion_r1_description)/rviz/urdf.rviz" />
+</launch>
