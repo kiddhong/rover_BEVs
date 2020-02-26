@@ -9,6 +9,5 @@
   <node
     name="rviz"
     pkg="rviz"
-    type="rviz"
-    args="-d $(find aion_r1_description)/rviz/urdf.rviz" />
+    type="rviz" />
 </launch>
