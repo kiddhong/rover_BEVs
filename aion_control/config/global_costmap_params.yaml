@@ -7,7 +7,3 @@ global_costmap:
   publish_frequency: 2.0
   transform_tolerance: 3.0
 
-  observation_sources: base_scan
-  base_scan: {data_type: LaserScan, topic: /scan,
-  marking: true, clearing: true, max_obstacle_height: 2.5, min_obstacle_height: 0.01}
-
