@@ -50,7 +50,7 @@
     <node name="tf_Lidar"
         pkg="tf"
         type="static_transform_publisher"
-        args="0.125 0 0.055 0 0 0 top_link laser 100">
+        args="0.125 0 0.055 0 0 0 top_link laser 40">
     </node>
 
     <node name="robot_pose_publisher"
@@ -63,14 +63,14 @@
     <node name="base_to_fcu_broadcaster"
         pkg="tf"
         type="static_transform_publisher"
-        args="0 0 0 0 0 0 base_link fcu 100">
+        args="0 0 0 0 0 0 base_link fcu 40">
     </node>
     
     <!-- If use KF, make unomment. -->
-    <!-- <node name="kf_localizer"
+<!--     <node name="kf_localizer"
     pkg="tf"
     type="static_transform_publisher"
-    args="0 0 0 0 0 0 UGV/est_base_link base_link 100">
+    args="0 0 0 0 0 0 UGV/est_base_link base_link 40">
     </node> -->
     <!-- If use KF, make uncomment. -->
 
@@ -86,7 +86,7 @@
     <node name="odom_matcher_2"
 	pkg="tf"
 	type="static_transform_publisher"
-	args="0 0 0 0 0 0 map UGV/odom 100">
+	args="0 0 0 0 0 0 map UGV/odom 40">
     </node>
     <!-- If not use obstacle mapper, make uncomment. -->
     <!-- By using mavros mavcmd sethome -c Lat Log Alt, it should be set before starting experiment, manually.-->

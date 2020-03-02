@@ -65,19 +65,19 @@
     </node>
     <!-- If not use KF, make comment. -->
 
-    <node name="UAV_UGV_odom_matcher"
+<!--     <node name="UAV_UGV_odom_matcher"
     pkg="tf"
     type="static_transform_publisher"
     args="0 0 0 0.707 0.707 0 0 UAV/odom UGV/odom 40">
-    </node>
+    </node> -->
     <!-- UAV/odom: NED, UGV/odom: ENU -->
 
     <!-- assumeption -->
-    <!-- <node name="odom_matcher_2"
+    <node name="odom_matcher_2"
 	pkg="tf"
 	type="static_transform_publisher"
 	args="0 0 0 0 0 0 map UGV/odom 100">
-    </node> -->
+    </node>
     <!-- By using mavros mavcmd sethome -c Lat Log Alt, it should be set before starting experiment, manually.-->
 
     <node
