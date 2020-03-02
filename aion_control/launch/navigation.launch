@@ -5,7 +5,7 @@
     <include file="$(find aion_control)/launch/move_base.launch">
         <arg name="cmd_vel_topic" value="cmd_vel" />
         <arg name="odom_topic" value="UGV/odom" />
-        <arg name="map_topic" value="/obstacle_mapper/map/" />
+        <arg name="map_topic" value="/map" />
     </include>
 
 </launch>
