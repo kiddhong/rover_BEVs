@@ -30,7 +30,7 @@
         name="map_server"
         pkg="map_server"
         type="map_server"
-        args="$(find aion_control)/maps/map_site_b.yaml">
+        args="$(find aion_control)/maps/b_site.yaml">
     </node>
 
     <!-- <arg name="x_pos" default="0.0"/>

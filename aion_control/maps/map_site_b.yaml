@@ -6,7 +6,7 @@ origin_x: -40.0
 origin_y: -25.0
 origin_yaw: 0.0
 map_height: 50.0
-map_width: 60.0
+map_width: 80.0
 
 map_frame_id: map
 
