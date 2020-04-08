@@ -19,7 +19,7 @@ DWAPlannerROS:
   acc_lim_theta: 5.0 
 
 # Goal Tolerance Parametes
-  xy_goal_tolerance: 0.15
+  xy_goal_tolerance: 0.3
   yaw_goal_tolerance: 0.5 # 2.5 should be tested.
   latch_xy_goal_tolerance: false
 
