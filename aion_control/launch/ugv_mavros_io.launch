@@ -65,11 +65,18 @@
     </node>
     <!-- If not use KF, make comment. -->
 
-    <node name="UAV_UGV_odom_matcher"
+    <!-- <node name="UAV_UGV_odom_matcher"
     pkg="tf"
     type="static_transform_publisher"
-    args="0 0 0 0.707 0.707 0 0 UAV/odom UGV/odom 40">
+    args="0 0 0 0.707 0.707 0 0 UGV/odom UAV/odom 40">
+    </node> -->
+
+    <node name="odom_matcher_2"
+	pkg="tf"
+	type="static_transform_publisher"
+	args="0 0 0 0 0 0 map UGV/odom 40">
     </node>
+    
     <!-- UAV/odom: NED, UGV/odom: ENU -->
 
     <!-- assumeption -->
