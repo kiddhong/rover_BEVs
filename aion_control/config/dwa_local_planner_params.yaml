@@ -24,20 +24,20 @@ DWAPlannerROS:
   latch_xy_goal_tolerance: false
 
 # Forward Simulation Parameters
-  sim_time: 3
-  vx_samples: 25
+  sim_time: 2 
+  vx_samples: 20
   vy_samples: 0
-  vtheta_samples: 25
+  vtheta_samples: 40
   controller_frequency: 5.0
 
 # Trajectory Scoring Parameters
-  path_distance_bias: 37.0
-  goal_distance_bias: 24.0
-  occdist_scale: 0.1 #0.01
-  forward_point_distance:  0.3 #0.325
-  stop_time_buffer: 0.2
-  scaling_speed: 0.25
-  max_scaling_factor: 0.2
+  path_distance_bias: 32.0 #37.0 # decreased or fixed
+  goal_distance_bias: 20.0 #24.0 # decreased or fixed
+  occdist_scale: 0.5 #0.1 #min: 0.01 # increased
+  forward_point_distance:  0.325 # fixed
+  stop_time_buffer: 0.2 # fixed
+  scaling_speed: 0.25 # fixed
+  max_scaling_factor: 0.2 # fixed
 
 # Oscillation Prevention Parameters
   oscillation_reset_dist: 0.05

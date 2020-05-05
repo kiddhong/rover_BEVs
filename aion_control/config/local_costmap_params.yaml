@@ -13,7 +13,7 @@ local_costmap:
   resolution: 0.02
   inscribed_radius: 0.35
   circumscribed_radius: 0.4
-  conservative_reset_dist: 1
+  conservative_reset_dist: 1.5
 
   # observation_sources: base_scan
   # base_scan: {data_type: LaserScan, topic: /scan,
