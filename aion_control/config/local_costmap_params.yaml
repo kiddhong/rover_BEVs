@@ -15,6 +15,6 @@ local_costmap:
   circumscribed_radius: 0.4
   conservative_reset_dist: 1
 
-  observation_sources: base_scan
-  base_scan: {data_type: LaserScan, topic: /scan,
-  marking: true, clearing: true, max_obstacle_height: 1.0, min_obstacle_height: 0.08}
+  # observation_sources: base_scan
+  # base_scan: {data_type: LaserScan, topic: /scan,
+  # marking: true, clearing: true, max_obstacle_height: 1.0, min_obstacle_height: 0.08}
